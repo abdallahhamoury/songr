@@ -1,11 +1,22 @@
 package com.example.songr;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Albums {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String title;
     private String artist;
     private int songCount;
-    private float length;
+    private int length;
     private String imageUrl;
+
+
 
     public Albums(String title, String artist, int songCount,int length,String imageUrl ) {
         this.title = title;
@@ -13,6 +24,14 @@ public class Albums {
         this.songCount = songCount;
         this.length= length;
         this.imageUrl=imageUrl;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -43,7 +62,7 @@ public class Albums {
         return length;
     }
 
-    public void setLength(float length) {
+    public void setLength(int length) {
         this.length = length;
     }
 
