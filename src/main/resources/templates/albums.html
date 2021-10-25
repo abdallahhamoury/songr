@@ -6,17 +6,27 @@
     <link th:href="@{style.css}" rel="stylesheet">
 </head>
 <body>
-<p>Albums</p>
-<div th:each="albums3 :${albums3} " >
-    <h1 th:text="${albums3.title}" ></h1>
-    <h1 th:text="${albums3.artist}" ></h1>
-    <h1 th:text="${albums3.songCount}" ></h1>
-    <h1 th:text="${albums3.length}" ></h1>
-    <img th:src="${albums3.imageUrl}">
-
-
+<h2>Added albums</h2>
+<form action="/addAllalbums" method="post">
+    <label>Title</label>
+    <input type="text" name="title" id="title">
+    <label>Artist:</label>
+    <input type="text" name="artist" id="artist">
+    <label>SongCount:</label>
+    <input type="number" name="songCount" id="songCount">
+    <label>Length:</label>
+    <input type="number" name="length" id="length">
+    <label>ImageUrl:</label>
+    <input type="text" name="imageUrl" id="imageUrl">
+    <input type="submit" value="Added">
+</form>
+<div th:each="album :${albums}">
+    <h3>ID:<span th:text="${album.id}"></span></h3>
+    <h2>Title:<span th:text="${album.title}"></span></h2>
+    <h3>Artist<span th:text="${album.artist}"></span></h3>
+    <h3>Song Count<span th:text="${album.songCount}"></span></h3>
+    <h3>Length<span th:text="${album.length}"></span></h3>
+    <img th:src="${album.imageUrl}">
 </div>
-
-
 </body>
 </html>
