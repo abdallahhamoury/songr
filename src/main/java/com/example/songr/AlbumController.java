@@ -34,7 +34,11 @@ AlbumRespository albumRespository;
     }
     @PostMapping("/addAllalbums")
 
-    public RedirectView addAllalbums(@RequestParam(value = "title")String title, @RequestParam(value = "artist")String artist, @RequestParam(value = "songCount")int songCount, @RequestParam(value = "length")int length, @RequestParam(value = "imageUrl")String imageUrl){
+    public RedirectView addAllalbums(@RequestParam(value = "title")String title,
+                                     @RequestParam(value = "artist")String artist,
+                                     @RequestParam(value = "songCount")int songCount,
+                                     @RequestParam(value = "length")int length,
+                                     @RequestParam(value = "imageUrl")String imageUrl){
         Albums album=new Albums(title,artist,songCount,length,imageUrl);
         albumRespository.save(album);
         return new RedirectView("/showAllalbums");

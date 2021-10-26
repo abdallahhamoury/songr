@@ -16,9 +16,11 @@ public class Albums {
     private int length;
     private String imageUrl;
 
+    public Albums() {
 
+    }
 
-    public Albums(String title, String artist, int songCount,int length,String imageUrl ) {
+    public Albums(String title, String artist, int songCount, int length, String imageUrl ) {
         this.title = title;
         this.artist = artist;
         this.songCount = songCount;
