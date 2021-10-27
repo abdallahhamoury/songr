@@ -25,3 +25,14 @@ navigate the app
 Updating your album can be saved in a database.
 Album on title, artist, and Omen user should be able to see information about all albums User should be able to add albums to the site. You are not required to write any tests for this lab.
 Make sure your server fails safely. The server must not crash and the database must not be damaged in any way if the user tries to read the information
+## Lab: 13 - Related Resources and Integration Testing
+### Feature Tasks
+ Create a Song model.
+ A Song has a title, a length (in seconds), a trackNumber, and the album on which that song appears.
+ Ensure that the relationship between Albums and Songs is appropriately set up.
+ A user should be able to see information about all the songs on the site.
+ A user should be able to view a page with data about one particular album.
+ A user should be able to add songs to an album.
+ A user should be able to see the songs that belong to an album when looking at that album.
+#### How to run application
+use http://localhost:8080
