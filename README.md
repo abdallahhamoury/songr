@@ -26,31 +26,15 @@ navigate the app
 Updating your album can be saved in a database.
 Album on title, artist, and Omen user should be able to see information about all albums User should be able to add albums to the site. You are not required to write any tests for this lab.
 Make sure your server fails safely. The server must not crash and the database must not be damaged in any way if the user tries to read the information
-
-
-# lab 11
-#SONGR
-
-# SONGR
-
-------------------------------------------------------------
-## Spring boot lab
--------------------------------------------------------------
-### Instructions:
-------------------------------------------------------------
-Clone this repo
-Build with gradle
-run it with spring boot and navigate to "/"
-navigate the app
-
-
-# lab 12
-## Lab: 12 - Spring and REST
+## Lab: 13 - Related Resources and Integration Testing
 ### Feature Tasks
-
-Updating your album can be saved in a database.
-Album on title, artist, and Omen user should be able to see information about all albums User should be able to add albums to the site. You are not required to write any tests for this lab.
-Make sure your server fails safely. The server must not crash and the database must not be damaged in any way if the user tries to read the information
-
-
+ Create a Song model.
+ A Song has a title, a length (in seconds), a trackNumber, and the album on which that song appears.
+ Ensure that the relationship between Albums and Songs is appropriately set up.
+ A user should be able to see information about all the songs on the site.
+ A user should be able to view a page with data about one particular album.
+ A user should be able to add songs to an album.
+ A user should be able to see the songs that belong to an album when looking at that album.
+#### How to run application
+use http://localhost:8080
 
