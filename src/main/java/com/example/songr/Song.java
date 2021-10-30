@@ -14,31 +14,22 @@ public class Song {
     private String title;
     private int length;
     private int trackNumber;
-    private String albumSongTiltle;
-
-public String getAlbumSongTiltle(){
- return albumSongTiltle;
-}
-public void setAlbumSongTiltle(String albumSongTiltle){
-    this.albumSongTiltle=albumSongTiltle;
-}
-
-public Albums getAlbumsSong(){
-    return albumsSong;
-}
-
-public void setAlbumsSong(Albums albumsSong){
-    this.albumsSong=albumsSong;
-}
 
 @ManyToOne
     private Albums albumsSong;
-public Song(String title,int length,int trackNumber,String albumSongTiltle){
+public Song(String title,int length,int trackNumber){
     this.title= title;
     this.length = length;
     this.trackNumber= trackNumber;
-    this.albumSongTiltle=albumSongTiltle;
+
 }
+    public Albums getAlbumsSong(){
+        return albumsSong;
+    }
+
+    public void setAlbumsSong(Albums albumsSong){
+        this.albumsSong=albumsSong;
+    }
 
     public int getId() {
         return id;

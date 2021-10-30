@@ -15,6 +15,12 @@
     <input type="number" name="length" id="length">
     <input type="submit" value="Added Albums one song">
 </form>
+<div th:each="song :${particular.songs}">
+    <h3>ID:<span th:text="${song.id}"></span></h3>
+    <h2>Title:<span th:text="${song.title}"></span></h2>
+    <h2>trackNumber:<span th:text="${song.trackNumber}"></span></h2>
+    <h3>Length<span th:text="${song.length}"></span></h3>
+</div>
 
 <div>
     <h3>ID:<span th:text="${particular.id}"></span></h3>
