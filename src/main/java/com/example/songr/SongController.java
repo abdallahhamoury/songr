@@ -20,7 +20,7 @@ public class SongController {
         model.addAttribute("songs",songRespositry.findAll());
         return "song.html";
     }
-    @GetMapping("/album/{id}")
+    @GetMapping("/addSongToAlbum/{id}")
     public String getparticularAlbum(@PathVariable Integer id, Model model){
 
         model.addAttribute("particular",albumRespository.findById(id).get());
@@ -30,13 +30,12 @@ public class SongController {
     public RedirectView addOneSong(@RequestParam(value = "title")String title,
                                    @RequestParam(value = "length")int length,
                                    @RequestParam(value = "trackNumber")int trackNumber,
-                                   @RequestParam(value = "albumSongTiltle")String albumSongTiltle,
                                    @PathVariable Integer id){
-        System.out.println(title+trackNumber+albumSongTiltle+length);
-        Song song=new Song(title,length,trackNumber,albumSongTiltle);
+        System.out.println(title+trackNumber+length);
+        Song song=new Song(title,length,trackNumber);
         song.setAlbumsSong(albumRespository.findById(id).get());
         songRespositry.save(song);
-        return new RedirectView("/album/{id}");
+        return new RedirectView("/addSongToAlbum/{id}");
     }
 
 
